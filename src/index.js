@@ -41,6 +41,7 @@ function fileR(file) {
 fileR(`./src/functions`);
 
 client.handleEvents();
+client.handleComponents();
 client.handleCommands();
 
 client.login(process.env.token);

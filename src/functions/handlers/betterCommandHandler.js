@@ -20,8 +20,8 @@ module.exports = (client) => {
       }
     }
     func(`src/commands`);
-    const clientID = "1190867838735483022";
-    const guildID = "1194127476536905838";
+    const { clientID, guildID } = require("../../../control.json");
+
     const rest = new REST({ version: "9" }).setToken(process.env.token);
     try {
       await rest.put(Routes.applicationGuildCommands(clientID, guildID), {
